@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="javax.xml.bind.test.JAXBContextTest" time="8.028" tests="228" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="sonar.login" value="admin"/>
+    <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
+    <property name="java.vm.vendor" value="Ubuntu"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://ubuntu.com/"/>
+    <property name="user.timezone" value="Europe/Vilnius"/>
+    <property name="maven.conf" value="/usr/share/maven/conf"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sonar.password" value="adminadmin"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean verify sonar:sonar -Dsonar.login=admin -Dsonar.password=adminadmin -e"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="maven.home" value="/usr/share/maven"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/rokas"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2021-04-20"/>
+    <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.11+9-Ubuntu-0ubuntu2.20.04"/>
+    <property name="user.name" value="rokas"/>
+    <property name="path.separator" value=":"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="os.version" value="5.11.0-40-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-lts"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="11.0.11"/>
+    <property name="user.dir" value="/home/rokas/Downloads/jaxb-spec-master"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/rokas/Downloads/jaxb-spec-master"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Ubuntu"/>
+    <property name="java.vm.version" value="11.0.11+9-Ubuntu-0ubuntu2.20.04"/>
+    <property name="classworlds.conf" value="/usr/share/maven/bin/m2.conf"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="library.jansi.path" value="/usr/share/maven/lib/jansi-native"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="testClass[0]" classname="javax.xml.bind.test.JAXBContextTest" time="0.095"/>
+  <testcase name="testPath[0]" classname="javax.xml.bind.test.JAXBContextTest" time="0.036"/>
+  <testcase name="testClassSM[0]" classname="javax.xml.bind.test.JAXBContextTest" time="0.224"/>
+  <testcase name="testClasses[0]" classname="javax.xml.bind.test.JAXBContextTest" time="0.028"/>
+  <testcase name="testClassesSM[0]" classname="javax.xml.bind.test.JAXBContextTest" time="0.047"/>
+  <testcase name="testPathSM[0]" classname="javax.xml.bind.test.JAXBContextTest" time="0.063"/>
+  <testcase name="testClass[1]" classname="javax.xml.bind.test.JAXBContextTest" time="0.034"/>
+  <testcase name="testPath[1]" classname="javax.xml.bind.test.JAXBContextTest" time="0.023"/>
+  <testcase name="testClassSM[1]" classname="javax.xml.bind.test.JAXBContextTest" time="0.022"/>
+  <testcase name="testClasses[1]" classname="javax.xml.bind.test.JAXBContextTest" time="0.015"/>
+  <testcase name="testClassesSM[1]" classname="javax.xml.bind.test.JAXBContextTest" time="0.029"/>
+  <testcase name="testPathSM[1]" classname="javax.xml.bind.test.JAXBContextTest" time="0.034"/>
+  <testcase name="testClass[2]" classname="javax.xml.bind.test.JAXBContextTest" time="0.016"/>
+  <testcase name="testPath[2]" classname="javax.xml.bind.test.JAXBContextTest" time="0.007"/>
+  <testcase name="testClassSM[2]" classname="javax.xml.bind.test.JAXBContextTest" time="0.021"/>
+  <testcase name="testClasses[2]" classname="javax.xml.bind.test.JAXBContextTest" time="0.017"/>
+  <testcase name="testClassesSM[2]" classname="javax.xml.bind.test.JAXBContextTest" time="0.017"/>
+  <testcase name="testPathSM[2]" classname="javax.xml.bind.test.JAXBContextTest" time="0.022"/>
+  <testcase name="testClass[3]" classname="javax.xml.bind.test.JAXBContextTest" time="0.048"/>
+  <testcase name="testPath[3]" classname="javax.xml.bind.test.JAXBContextTest" time="0.041"/>
+  <testcase name="testClassSM[3]" classname="javax.xml.bind.test.JAXBContextTest" time="0.036"/>
+  <testcase name="testClasses[3]" classname="javax.xml.bind.test.JAXBContextTest" time="0.042"/>
+  <testcase name="testClassesSM[3]" classname="javax.xml.bind.test.JAXBContextTest" time="0.029"/>
+  <testcase name="testPathSM[3]" classname="javax.xml.bind.test.JAXBContextTest" time="0.039"/>
+  <testcase name="testClass[4]" classname="javax.xml.bind.test.JAXBContextTest" time="0.023"/>
+  <testcase name="testPath[4]" classname="javax.xml.bind.test.JAXBContextTest" time="0.027"/>
+  <testcase name="testClassSM[4]" classname="javax.xml.bind.test.JAXBContextTest" time="0.026"/>
+  <testcase name="testClasses[4]" classname="javax.xml.bind.test.JAXBContextTest" time="0.044"/>
+  <testcase name="testClassesSM[4]" classname="javax.xml.bind.test.JAXBContextTest" time="0.019"/>
+  <testcase name="testPathSM[4]" classname="javax.xml.bind.test.JAXBContextTest" time="0.001"/>
+  <testcase name="testClass[5]" classname="javax.xml.bind.test.JAXBContextTest" time="0.039"/>
+  <testcase name="testPath[5]" classname="javax.xml.bind.test.JAXBContextTest" time="0.014"/>
+  <testcase name="testClassSM[5]" classname="javax.xml.bind.test.JAXBContextTest" time="0.023"/>
+  <testcase name="testClasses[5]" classname="javax.xml.bind.test.JAXBContextTest" time="0.026"/>
+  <testcase name="testClassesSM[5]" classname="javax.xml.bind.test.JAXBContextTest" time="0.022"/>
+  <testcase name="testPathSM[5]" classname="javax.xml.bind.test.JAXBContextTest" time="0.02"/>
+  <testcase name="testClass[6]" classname="javax.xml.bind.test.JAXBContextTest" time="0.018"/>
+  <testcase name="testPath[6]" classname="javax.xml.bind.test.JAXBContextTest" time="0.011"/>
+  <testcase name="testClassSM[6]" classname="javax.xml.bind.test.JAXBContextTest" time="0.014"/>
+  <testcase name="testClasses[6]" classname="javax.xml.bind.test.JAXBContextTest" time="0.018"/>
+  <testcase name="testClassesSM[6]" classname="javax.xml.bind.test.JAXBContextTest" time="0.012"/>
+  <testcase name="testPathSM[6]" classname="javax.xml.bind.test.JAXBContextTest" time="0.018"/>
+  <testcase name="testClass[7]" classname="javax.xml.bind.test.JAXBContextTest" time="0.034"/>
+  <testcase name="testPath[7]" classname="javax.xml.bind.test.JAXBContextTest" time="0.03"/>
+  <testcase name="testClassSM[7]" classname="javax.xml.bind.test.JAXBContextTest" time="0.028"/>
+  <testcase name="testClasses[7]" classname="javax.xml.bind.test.JAXBContextTest" time="0.036"/>
+  <testcase name="testClassesSM[7]" classname="javax.xml.bind.test.JAXBContextTest" time="0.028"/>
+  <testcase name="testPathSM[7]" classname="javax.xml.bind.test.JAXBContextTest" time="0.031"/>
+  <testcase name="testClass[8]" classname="javax.xml.bind.test.JAXBContextTest" time="0.026"/>
+  <testcase name="testPath[8]" classname="javax.xml.bind.test.JAXBContextTest" time="0.057"/>
+  <testcase name="testClassSM[8]" classname="javax.xml.bind.test.JAXBContextTest" time="0.021"/>
+  <testcase name="testClasses[8]" classname="javax.xml.bind.test.JAXBContextTest" time="0.014"/>
+  <testcase name="testClassesSM[8]" classname="javax.xml.bind.test.JAXBContextTest" time="0.023"/>
+  <testcase name="testPathSM[8]" classname="javax.xml.bind.test.JAXBContextTest" time="0.024"/>
+  <testcase name="testClass[9]" classname="javax.xml.bind.test.JAXBContextTest" time="0.014"/>
+  <testcase name="testPath[9]" classname="javax.xml.bind.test.JAXBContextTest" time="0.019"/>
+  <testcase name="testClassSM[9]" classname="javax.xml.bind.test.JAXBContextTest" time="0.013"/>
+  <testcase name="testClasses[9]" classname="javax.xml.bind.test.JAXBContextTest" time="0.011"/>
+  <testcase name="testClassesSM[9]" classname="javax.xml.bind.test.JAXBContextTest" time="0.015"/>
+  <testcase name="testPathSM[9]" classname="javax.xml.bind.test.JAXBContextTest" time="0.027"/>
+  <testcase name="testClass[10]" classname="javax.xml.bind.test.JAXBContextTest" time="0.015"/>
+  <testcase name="testPath[10]" classname="javax.xml.bind.test.JAXBContextTest" time="0.016"/>
+  <testcase name="testClassSM[10]" classname="javax.xml.bind.test.JAXBContextTest" time="0.012"/>
+  <testcase name="testClasses[10]" classname="javax.xml.bind.test.JAXBContextTest" time="0.012"/>
+  <testcase name="testClassesSM[10]" classname="javax.xml.bind.test.JAXBContextTest" time="0.017"/>
+  <testcase name="testPathSM[10]" classname="javax.xml.bind.test.JAXBContextTest" time="0.013"/>
+  <testcase name="testClass[11]" classname="javax.xml.bind.test.JAXBContextTest" time="0.024"/>
+  <testcase name="testPath[11]" classname="javax.xml.bind.test.JAXBContextTest" time="0.024"/>
+  <testcase name="testClassSM[11]" classname="javax.xml.bind.test.JAXBContextTest" time="0.019"/>
+  <testcase name="testClasses[11]" classname="javax.xml.bind.test.JAXBContextTest" time="0.035"/>
+  <testcase name="testClassesSM[11]" classname="javax.xml.bind.test.JAXBContextTest" time="0.033"/>
+  <testcase name="testPathSM[11]" classname="javax.xml.bind.test.JAXBContextTest" time="0.036"/>
+  <testcase name="testClass[12]" classname="javax.xml.bind.test.JAXBContextTest" time="0.018"/>
+  <testcase name="testPath[12]" classname="javax.xml.bind.test.JAXBContextTest" time="0.017"/>
+  <testcase name="testClassSM[12]" classname="javax.xml.bind.test.JAXBContextTest" time="0.012"/>
+  <testcase name="testClasses[12]" classname="javax.xml.bind.test.JAXBContextTest" time="0.019"/>
+  <testcase name="testClassesSM[12]" classname="javax.xml.bind.test.JAXBContextTest" time="0.017"/>
+  <testcase name="testPathSM[12]" classname="javax.xml.bind.test.JAXBContextTest" time="0.027"/>
+  <testcase name="testClass[13]" classname="javax.xml.bind.test.JAXBContextTest" time="0.017"/>
+  <testcase name="testPath[13]" classname="javax.xml.bind.test.JAXBContextTest" time="0.023"/>
+  <testcase name="testClassSM[13]" classname="javax.xml.bind.test.JAXBContextTest" time="0.026"/>
+  <testcase name="testClasses[13]" classname="javax.xml.bind.test.JAXBContextTest" time="0.016"/>
+  <testcase name="testClassesSM[13]" classname="javax.xml.bind.test.JAXBContextTest" time="0.009"/>
+  <testcase name="testPathSM[13]" classname="javax.xml.bind.test.JAXBContextTest" time="0.013"/>
+  <testcase name="testClass[14]" classname="javax.xml.bind.test.JAXBContextTest" time="0.015"/>
+  <testcase name="testPath[14]" classname="javax.xml.bind.test.JAXBContextTest" time="0.023"/>
+  <testcase name="testClassSM[14]" classname="javax.xml.bind.test.JAXBContextTest" time="0.013"/>
+  <testcase name="testClasses[14]" classname="javax.xml.bind.test.JAXBContextTest" time="0.011"/>
+  <testcase name="testClassesSM[14]" classname="javax.xml.bind.test.JAXBContextTest" time="0.005"/>
+  <testcase name="testPathSM[14]" classname="javax.xml.bind.test.JAXBContextTest" time="0.012"/>
+  <testcase name="testClass[15]" classname="javax.xml.bind.test.JAXBContextTest" time="0.023"/>
+  <testcase name="testPath[15]" classname="javax.xml.bind.test.JAXBContextTest" time="0.025"/>
+  <testcase name="testClassSM[15]" classname="javax.xml.bind.test.JAXBContextTest" time="0.02"/>
+  <testcase name="testClasses[15]" classname="javax.xml.bind.test.JAXBContextTest" time="0.029"/>
+  <testcase name="testClassesSM[15]" classname="javax.xml.bind.test.JAXBContextTest" time="0.026"/>
+  <testcase name="testPathSM[15]" classname="javax.xml.bind.test.JAXBContextTest" time="0.027"/>
+  <testcase name="testClass[16]" classname="javax.xml.bind.test.JAXBContextTest" time="0.012"/>
+  <testcase name="testPath[16]" classname="javax.xml.bind.test.JAXBContextTest" time="0.013"/>
+  <testcase name="testClassSM[16]" classname="javax.xml.bind.test.JAXBContextTest" time="0.016"/>
+  <testcase name="testClasses[16]" classname="javax.xml.bind.test.JAXBContextTest" time="0.014"/>
+  <testcase name="testClassesSM[16]" classname="javax.xml.bind.test.JAXBContextTest" time="0.019"/>
+  <testcase name="testPathSM[16]" classname="javax.xml.bind.test.JAXBContextTest" time="0.013"/>
+  <testcase name="testClass[17]" classname="javax.xml.bind.test.JAXBContextTest" time="0.015"/>
+  <testcase name="testPath[17]" classname="javax.xml.bind.test.JAXBContextTest" time="0.015"/>
+  <testcase name="testClassSM[17]" classname="javax.xml.bind.test.JAXBContextTest" time="0.017"/>
+  <testcase name="testClasses[17]" classname="javax.xml.bind.test.JAXBContextTest" time="0.014"/>
+  <testcase name="testClassesSM[17]" classname="javax.xml.bind.test.JAXBContextTest" time="0.018"/>
+  <testcase name="testPathSM[17]" classname="javax.xml.bind.test.JAXBContextTest" time="0.009"/>
+  <testcase name="testClass[18]" classname="javax.xml.bind.test.JAXBContextTest" time="0.017"/>
+  <testcase name="testPath[18]" classname="javax.xml.bind.test.JAXBContextTest" time="0.016"/>
+  <testcase name="testClassSM[18]" classname="javax.xml.bind.test.JAXBContextTest" time="0.013"/>
+  <testcase name="testClasses[18]" classname="javax.xml.bind.test.JAXBContextTest" time="0.017"/>
+  <testcase name="testClassesSM[18]" classname="javax.xml.bind.test.JAXBContextTest" time="0.007"/>
+  <testcase name="testPathSM[18]" classname="javax.xml.bind.test.JAXBContextTest" time="0.02"/>
+  <testcase name="testClass[19]" classname="javax.xml.bind.test.JAXBContextTest" time="0.012"/>
+  <testcase name="testPath[19]" classname="javax.xml.bind.test.JAXBContextTest" time="0.007"/>
+  <testcase name="testClassSM[19]" classname="javax.xml.bind.test.JAXBContextTest" time="0.011"/>
+  <testcase name="testClasses[19]" classname="javax.xml.bind.test.JAXBContextTest" time="0.014"/>
+  <testcase name="testClassesSM[19]" classname="javax.xml.bind.test.JAXBContextTest" time="0.014"/>
+  <testcase name="testPathSM[19]" classname="javax.xml.bind.test.JAXBContextTest" time="0.026"/>
+  <testcase name="testClass[20]" classname="javax.xml.bind.test.JAXBContextTest" time="0.019"/>
+  <testcase name="testPath[20]" classname="javax.xml.bind.test.JAXBContextTest" time="0.01"/>
+  <testcase name="testClassSM[20]" classname="javax.xml.bind.test.JAXBContextTest" time="0.013"/>
+  <testcase name="testClasses[20]" classname="javax.xml.bind.test.JAXBContextTest" time="0.016"/>
+  <testcase name="testClassesSM[20]" classname="javax.xml.bind.test.JAXBContextTest" time="0.025"/>
+  <testcase name="testPathSM[20]" classname="javax.xml.bind.test.JAXBContextTest" time="0.018"/>
+  <testcase name="testClass[21]" classname="javax.xml.bind.test.JAXBContextTest" time="0.018"/>
+  <testcase name="testPath[21]" classname="javax.xml.bind.test.JAXBContextTest" time="0.025"/>
+  <testcase name="testClassSM[21]" classname="javax.xml.bind.test.JAXBContextTest" time="0.018"/>
+  <testcase name="testClasses[21]" classname="javax.xml.bind.test.JAXBContextTest" time="0.023"/>
+  <testcase name="testClassesSM[21]" classname="javax.xml.bind.test.JAXBContextTest" time="0.015"/>
+  <testcase name="testPathSM[21]" classname="javax.xml.bind.test.JAXBContextTest" time="0.018"/>
+  <testcase name="testClass[22]" classname="javax.xml.bind.test.JAXBContextTest" time="0.016"/>
+  <testcase name="testPath[22]" classname="javax.xml.bind.test.JAXBContextTest" time="0.019"/>
+  <testcase name="testClassSM[22]" classname="javax.xml.bind.test.JAXBContextTest" time="0.018"/>
+  <testcase name="testClasses[22]" classname="javax.xml.bind.test.JAXBContextTest" time="0.017"/>
+  <testcase name="testClassesSM[22]" classname="javax.xml.bind.test.JAXBContextTest" time="0.015"/>
+  <testcase name="testPathSM[22]" classname="javax.xml.bind.test.JAXBContextTest" time="0.025"/>
+  <testcase name="testClass[23]" classname="javax.xml.bind.test.JAXBContextTest" time="0.014"/>
+  <testcase name="testPath[23]" classname="javax.xml.bind.test.JAXBContextTest" time="0.013"/>
+  <testcase name="testClassSM[23]" classname="javax.xml.bind.test.JAXBContextTest" time="0.016"/>
+  <testcase name="testClasses[23]" classname="javax.xml.bind.test.JAXBContextTest" time="0.013"/>
+  <testcase name="testClassesSM[23]" classname="javax.xml.bind.test.JAXBContextTest" time="0.015"/>
+  <testcase name="testPathSM[23]" classname="javax.xml.bind.test.JAXBContextTest" time="0.013"/>
+  <testcase name="testClass[24]" classname="javax.xml.bind.test.JAXBContextTest" time="0.014"/>
+  <testcase name="testPath[24]" classname="javax.xml.bind.test.JAXBContextTest" time="0.017"/>
+  <testcase name="testClassSM[24]" classname="javax.xml.bind.test.JAXBContextTest" time="0.016"/>
+  <testcase name="testClasses[24]" classname="javax.xml.bind.test.JAXBContextTest" time="0.021"/>
+  <testcase name="testClassesSM[24]" classname="javax.xml.bind.test.JAXBContextTest" time="0.034"/>
+  <testcase name="testPathSM[24]" classname="javax.xml.bind.test.JAXBContextTest" time="0.02"/>
+  <testcase name="testClass[25]" classname="javax.xml.bind.test.JAXBContextTest" time="0.025"/>
+  <testcase name="testPath[25]" classname="javax.xml.bind.test.JAXBContextTest" time="0.017"/>
+  <testcase name="testClassSM[25]" classname="javax.xml.bind.test.JAXBContextTest" time="0.024"/>
+  <testcase name="testClasses[25]" classname="javax.xml.bind.test.JAXBContextTest" time="0.02"/>
+  <testcase name="testClassesSM[25]" classname="javax.xml.bind.test.JAXBContextTest" time="0.011"/>
+  <testcase name="testPathSM[25]" classname="javax.xml.bind.test.JAXBContextTest" time="0.036"/>
+  <testcase name="testClass[26]" classname="javax.xml.bind.test.JAXBContextTest" time="0.011"/>
+  <testcase name="testPath[26]" classname="javax.xml.bind.test.JAXBContextTest" time="0.015"/>
+  <testcase name="testClassSM[26]" classname="javax.xml.bind.test.JAXBContextTest" time="0.01"/>
+  <testcase name="testClasses[26]" classname="javax.xml.bind.test.JAXBContextTest" time="0.01"/>
+  <testcase name="testClassesSM[26]" classname="javax.xml.bind.test.JAXBContextTest" time="0.008"/>
+  <testcase name="testPathSM[26]" classname="javax.xml.bind.test.JAXBContextTest" time="0.009"/>
+  <testcase name="testClass[27]" classname="javax.xml.bind.test.JAXBContextTest" time="0.014"/>
+  <testcase name="testPath[27]" classname="javax.xml.bind.test.JAXBContextTest" time="0.003"/>
+  <testcase name="testClassSM[27]" classname="javax.xml.bind.test.JAXBContextTest" time="0.008"/>
+  <testcase name="testClasses[27]" classname="javax.xml.bind.test.JAXBContextTest" time="0.004"/>
+  <testcase name="testClassesSM[27]" classname="javax.xml.bind.test.JAXBContextTest" time="0.006"/>
+  <testcase name="testPathSM[27]" classname="javax.xml.bind.test.JAXBContextTest" time="0.011"/>
+  <testcase name="testClass[28]" classname="javax.xml.bind.test.JAXBContextTest" time="0.01"/>
+  <testcase name="testPath[28]" classname="javax.xml.bind.test.JAXBContextTest" time="0.014"/>
+  <testcase name="testClassSM[28]" classname="javax.xml.bind.test.JAXBContextTest" time="0.006"/>
+  <testcase name="testClasses[28]" classname="javax.xml.bind.test.JAXBContextTest" time="0.009"/>
+  <testcase name="testClassesSM[28]" classname="javax.xml.bind.test.JAXBContextTest" time="0.01"/>
+  <testcase name="testPathSM[28]" classname="javax.xml.bind.test.JAXBContextTest" time="0.012"/>
+  <testcase name="testClass[29]" classname="javax.xml.bind.test.JAXBContextTest" time="0.003"/>
+  <testcase name="testPath[29]" classname="javax.xml.bind.test.JAXBContextTest" time="0.003"/>
+  <testcase name="testClassSM[29]" classname="javax.xml.bind.test.JAXBContextTest" time="0.003"/>
+  <testcase name="testClasses[29]" classname="javax.xml.bind.test.JAXBContextTest" time="0.001"/>
+  <testcase name="testClassesSM[29]" classname="javax.xml.bind.test.JAXBContextTest" time="0.009"/>
+  <testcase name="testPathSM[29]" classname="javax.xml.bind.test.JAXBContextTest" time="0.006"/>
+  <testcase name="testClass[30]" classname="javax.xml.bind.test.JAXBContextTest" time="0.001"/>
+  <testcase name="testPath[30]" classname="javax.xml.bind.test.JAXBContextTest" time="0.002"/>
+  <testcase name="testClassSM[30]" classname="javax.xml.bind.test.JAXBContextTest" time="0"/>
+  <testcase name="testClasses[30]" classname="javax.xml.bind.test.JAXBContextTest" time="0.001"/>
+  <testcase name="testClassesSM[30]" classname="javax.xml.bind.test.JAXBContextTest" time="0"/>
+  <testcase name="testPathSM[30]" classname="javax.xml.bind.test.JAXBContextTest" time="0"/>
+  <testcase name="testClass[31]" classname="javax.xml.bind.test.JAXBContextTest" time="0.009"/>
+  <testcase name="testPath[31]" classname="javax.xml.bind.test.JAXBContextTest" time="0.011"/>
+  <testcase name="testClassSM[31]" classname="javax.xml.bind.test.JAXBContextTest" time="0.01"/>
+  <testcase name="testClasses[31]" classname="javax.xml.bind.test.JAXBContextTest" time="0.013"/>
+  <testcase name="testClassesSM[31]" classname="javax.xml.bind.test.JAXBContextTest" time="0.01"/>
+  <testcase name="testPathSM[31]" classname="javax.xml.bind.test.JAXBContextTest" time="0.009"/>
+  <testcase name="testClass[32]" classname="javax.xml.bind.test.JAXBContextTest" time="0.003"/>
+  <testcase name="testPath[32]" classname="javax.xml.bind.test.JAXBContextTest" time="0.007"/>
+  <testcase name="testClassSM[32]" classname="javax.xml.bind.test.JAXBContextTest" time="0.004"/>
+  <testcase name="testClasses[32]" classname="javax.xml.bind.test.JAXBContextTest" time="0.004"/>
+  <testcase name="testClassesSM[32]" classname="javax.xml.bind.test.JAXBContextTest" time="0.004"/>
+  <testcase name="testPathSM[32]" classname="javax.xml.bind.test.JAXBContextTest" time="0.003"/>
+  <testcase name="testClass[33]" classname="javax.xml.bind.test.JAXBContextTest" time="0.001"/>
+  <testcase name="testPath[33]" classname="javax.xml.bind.test.JAXBContextTest" time="0"/>
+  <testcase name="testClassSM[33]" classname="javax.xml.bind.test.JAXBContextTest" time="0.001"/>
+  <testcase name="testClasses[33]" classname="javax.xml.bind.test.JAXBContextTest" time="0.001"/>
+  <testcase name="testClassesSM[33]" classname="javax.xml.bind.test.JAXBContextTest" time="0.001"/>
+  <testcase name="testPathSM[33]" classname="javax.xml.bind.test.JAXBContextTest" time="0.001"/>
+  <testcase name="testClass[34]" classname="javax.xml.bind.test.JAXBContextTest" time="0.005"/>
+  <testcase name="testPath[34]" classname="javax.xml.bind.test.JAXBContextTest" time="0.006"/>
+  <testcase name="testClassSM[34]" classname="javax.xml.bind.test.JAXBContextTest" time="0.006"/>
+  <testcase name="testClasses[34]" classname="javax.xml.bind.test.JAXBContextTest" time="0.006"/>
+  <testcase name="testClassesSM[34]" classname="javax.xml.bind.test.JAXBContextTest" time="0.007"/>
+  <testcase name="testPathSM[34]" classname="javax.xml.bind.test.JAXBContextTest" time="0.009"/>
+  <testcase name="testClass[35]" classname="javax.xml.bind.test.JAXBContextTest" time="0.003"/>
+  <testcase name="testPath[35]" classname="javax.xml.bind.test.JAXBContextTest" time="0"/>
+  <testcase name="testClassSM[35]" classname="javax.xml.bind.test.JAXBContextTest" time="0"/>
+  <testcase name="testClasses[35]" classname="javax.xml.bind.test.JAXBContextTest" time="0.005"/>
+  <testcase name="testClassesSM[35]" classname="javax.xml.bind.test.JAXBContextTest" time="0"/>
+  <testcase name="testPathSM[35]" classname="javax.xml.bind.test.JAXBContextTest" time="0.001"/>
+  <testcase name="testClass[36]" classname="javax.xml.bind.test.JAXBContextTest" time="0.007"/>
+  <testcase name="testPath[36]" classname="javax.xml.bind.test.JAXBContextTest" time="0.013"/>
+  <testcase name="testClassSM[36]" classname="javax.xml.bind.test.JAXBContextTest" time="0.007"/>
+  <testcase name="testClasses[36]" classname="javax.xml.bind.test.JAXBContextTest" time="0.005"/>
+  <testcase name="testClassesSM[36]" classname="javax.xml.bind.test.JAXBContextTest" time="0.005"/>
+  <testcase name="testPathSM[36]" classname="javax.xml.bind.test.JAXBContextTest" time="0.008"/>
+  <testcase name="testClass[37]" classname="javax.xml.bind.test.JAXBContextTest" time="0.001"/>
+  <testcase name="testPath[37]" classname="javax.xml.bind.test.JAXBContextTest" time="0.005"/>
+  <testcase name="testClassSM[37]" classname="javax.xml.bind.test.JAXBContextTest" time="0.002"/>
+  <testcase name="testClasses[37]" classname="javax.xml.bind.test.JAXBContextTest" time="0.001"/>
+  <testcase name="testClassesSM[37]" classname="javax.xml.bind.test.JAXBContextTest" time="0.001"/>
+  <testcase name="testPathSM[37]" classname="javax.xml.bind.test.JAXBContextTest" time="0.003"/>
+</testsuite>
