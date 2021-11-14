@@ -163,7 +163,7 @@ public final class JAXB {
 
     private static <T> void createAndCache(Class<T> type) throws JAXBException {
         Cache d = new Cache(type);
-        cache = new WeakReference<Cache>(d);
+        cache = new WeakReference<>(d);
     }
 
     /**

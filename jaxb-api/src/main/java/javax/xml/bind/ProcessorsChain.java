@@ -29,6 +29,6 @@ public class ProcessorsChain {
     }
 
     public Result processToResult(Object xml) {
-        return sourceChain.processToResult(xml);
+        return resultChain.processToResult(xml);
     }
 }

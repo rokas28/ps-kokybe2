@@ -3,9 +3,7 @@ package javax.xml.bind;
 import javax.xml.transform.Result;
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamResult;
-import javax.xml.transform.stream.StreamSource;
 import java.io.Writer;
-import java.net.URL;
 
 public class WriterProcessor extends Processor {
 
