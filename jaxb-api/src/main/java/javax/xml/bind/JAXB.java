@@ -283,7 +283,7 @@ public final class JAXB {
      * Creates {@link Source} from various XML representation.
      * See {@link #unmarshal} for the conversion rules.
      */
-    private static Source toSource(Object xml) throws IOException {
+    private static Source toSource(Object xml) {
         if(xml==null)
             throw new IllegalArgumentException("no XML is given");
         return new ProcessorsChain().processToSource(xml);
@@ -570,7 +570,7 @@ public final class JAXB {
      * Creates {@link Result} from various XML representation.
      * See {@link #_marshal(Object,Object)} for the conversion rules.
      */
-    private static Result toResult(Object xml) throws IOException {
+    private static Result toResult(Object xml) {
         if(xml==null)
             throw new IllegalArgumentException("no XML is given");
         return new ProcessorsChain().processToResult(xml);
