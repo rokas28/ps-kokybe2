@@ -191,7 +191,7 @@ public final class JAXB {
         try {
             JAXBElement<T> item = getContext(type).createUnmarshaller().unmarshal(toSource(xml), type);
             return item.getValue();
-        } catch (JAXBException|IOException e) {
+        } catch (JAXBException e) {
             throw new DataBindingException(e);
         }
     }
@@ -207,7 +207,7 @@ public final class JAXB {
         try {
             JAXBElement<T> item = getContext(type).createUnmarshaller().unmarshal(toSource(xml), type);
             return item.getValue();
-        } catch (JAXBException|IOException e) {
+        } catch (JAXBException e) {
             throw new DataBindingException(e);
         }
     }
@@ -224,7 +224,7 @@ public final class JAXB {
         try {
             JAXBElement<T> item = getContext(type).createUnmarshaller().unmarshal(toSource(xml), type);
             return item.getValue();
-        } catch (JAXBException|IOException e) {
+        } catch (JAXBException e) {
             throw new DataBindingException(e);
         }
     }
@@ -240,7 +240,7 @@ public final class JAXB {
         try {
             JAXBElement<T> item = getContext(type).createUnmarshaller().unmarshal(toSource(xml), type);
             return item.getValue();
-        } catch (JAXBException|IOException e) {
+        } catch (JAXBException e) {
             throw new DataBindingException(e);
         }
     }
@@ -257,7 +257,7 @@ public final class JAXB {
         try {
             JAXBElement<T> item = getContext(type).createUnmarshaller().unmarshal(toSource(xml), type);
             return item.getValue();
-        } catch (JAXBException|IOException e) {
+        } catch (JAXBException e) {
             throw new DataBindingException(e);
         }
     }
@@ -272,7 +272,7 @@ public final class JAXB {
         try {
             JAXBElement<T> item = getContext(type).createUnmarshaller().unmarshal(toSource(xml), type);
             return item.getValue();
-        } catch (JAXBException|IOException e) {
+        } catch (JAXBException e) {
             throw new DataBindingException(e);
         }
     }
@@ -537,12 +537,10 @@ public final class JAXB {
             doMarshal(jaxbObject, xml);
         } catch (JAXBException e) {
             throw new DataBindingException(e);
-        } catch (IOException e) {
-            throw new DataBindingException(e);
         }
     }
 
-    private static void doMarshal(Object jaxbObject, Object xml) throws JAXBException, IOException {
+    private static void doMarshal(Object jaxbObject, Object xml) throws JAXBException {
         JAXBContext context;
 
         if(jaxbObject instanceof JAXBElement) {
