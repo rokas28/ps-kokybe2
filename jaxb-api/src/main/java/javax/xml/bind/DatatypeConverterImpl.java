@@ -272,12 +272,37 @@ final class DatatypeConverterImpl implements DatatypeConverterInterface {
 
     public boolean parseBoolean(String lexicalXSDBoolean) {
         Boolean b = _parseBoolean(lexicalXSDBoolean);
-        return (b == null) ? false : b.booleanValue();
+        return b.booleanValue();
+    }
+
+    public static Boolean checkStrBooleanTrue(char ch, CharSequence literal, int strIndex, int len ) {
+        String strTrue = "rue";
+        int i = 0;
+        do {
+            ch = literal.charAt(i++);
+        } while ((strTrue.charAt(strIndex++) == ch) && i < len && strIndex < 3);
+
+        if (strIndex == 3) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static Boolean checkStrBooleanFalse(char ch, CharSequence literal, int strIndex, int len ) {
+        String strFalse = "alse";
+        int i = 0;
+        do {
+            ch = literal.charAt(i++);
+        } while ((strFalse.charAt(strIndex++) == ch) && i < len && strIndex < 4);
+        
+          return false;
+        
     }
 
     public static Boolean _parseBoolean(CharSequence literal) {
         if (literal == null) {
-            return null;
+            return false;
         }
 
         int i = 0;
@@ -286,7 +311,7 @@ final class DatatypeConverterImpl implements DatatypeConverterInterface {
         boolean value = false;
 
         if (literal.length() <= 0) {
-            return null;
+            return false;
         }
 
         do {
@@ -303,34 +328,21 @@ final class DatatypeConverterImpl implements DatatypeConverterInterface {
                 value = false;
                 break;
             case 't':
-                String strTrue = "rue";
-                do {
-                    ch = literal.charAt(i++);
-                } while ((strTrue.charAt(strIndex++) == ch) && i < len && strIndex < 3);
-
-                if (strIndex == 3) {
-                    value = true;
-                } else {
-                    return false;
-                }
+                value = checkStrBooleanTrue(ch, literal, strIndex, len);
+                if (!value) return false;
+                
 //                    throw new IllegalArgumentException("String \"" + literal + "\" is not valid boolean value.");
-
+                
                 break;
             case 'f':
-                String strFalse = "alse";
-                do {
-                    ch = literal.charAt(i++);
-                } while ((strFalse.charAt(strIndex++) == ch) && i < len && strIndex < 4);
+                value = checkStrBooleanTrue(ch, literal, strIndex, len);
+                if (!value) return false;
 
-
-                if (strIndex == 4) {
-                    value = false;
-                } else {
-                    return false;
-                }
 //                    throw new IllegalArgumentException("String \"" + literal + "\" is not valid boolean value.");
 
                 break;
+            default:
+            	break;
         }
 
         if (i < len) {
@@ -342,7 +354,7 @@ final class DatatypeConverterImpl implements DatatypeConverterInterface {
         if (i == len) {
             return value;
         } else {
-            return null;
+            return false;
         }
 //            throw new IllegalArgumentException("String \"" + literal + "\" is not valid boolean value.");
     }

@@ -102,6 +102,21 @@ public abstract class AbstractMarshallerImpl implements Marshaller
 
     /** store the value of the fragment property. */
     private boolean fragment = false;
+    
+    private static final String CP037 = "cp037";
+    private static final String CP277 = "cp277";
+    private static final String CP278 = "cp278";
+    private static final String CP280 = "cp280";
+    private static final String CP284 = "cp284";
+    private static final String CP285 = "cp285";
+    private static final String CP297 = "cp297";
+    private static final String CP420 = "cp420";
+    private static final String CP424 = "cp424";
+    private static final String CP500 = "cp500";
+    private static final String CP870 = "cp870";
+    private static final String CP871 = "cp871";
+    private static final String CP918 = "cp918";
+    
 
     public final void marshal( Object obj, java.io.OutputStream os )
         throws JAXBException {
@@ -112,13 +127,8 @@ public abstract class AbstractMarshallerImpl implements Marshaller
 
     public void marshal(Object jaxbElement, File output) throws JAXBException {
         checkNotNull(jaxbElement, "jaxbElement", output, "output" );
-        try {
-            OutputStream os = new BufferedOutputStream(new FileOutputStream(output));
-            try {
-                marshal( jaxbElement, new StreamResult(os) );
-            } finally {
-                os.close();
-            }
+        try (OutputStream os = new BufferedOutputStream(new FileOutputStream(output))) {
+            marshal( jaxbElement, new StreamResult(os) );
         } catch (IOException e) {
             throw new JAXBException(e);
         }
@@ -266,30 +276,30 @@ public abstract class AbstractMarshallerImpl implements Marshaller
         // taken from the project-X parser
         "ISO-10646-UCS-2", "Unicode",
     
-        "EBCDIC-CP-US", "cp037",
-        "EBCDIC-CP-CA", "cp037",
-        "EBCDIC-CP-NL", "cp037",
-        "EBCDIC-CP-WT", "cp037",
+        "EBCDIC-CP-US", CP037,
+        "EBCDIC-CP-CA", CP037,
+        "EBCDIC-CP-NL", CP037,
+        "EBCDIC-CP-WT", CP037,
     
-        "EBCDIC-CP-DK", "cp277",
-        "EBCDIC-CP-NO", "cp277",
-        "EBCDIC-CP-FI", "cp278",
-        "EBCDIC-CP-SE", "cp278",
+        "EBCDIC-CP-DK", CP277,
+        "EBCDIC-CP-NO", CP277,
+        "EBCDIC-CP-FI", CP278,
+        "EBCDIC-CP-SE", CP278,
     
-        "EBCDIC-CP-IT", "cp280",
-        "EBCDIC-CP-ES", "cp284",
-        "EBCDIC-CP-GB", "cp285",
-        "EBCDIC-CP-FR", "cp297",
+        "EBCDIC-CP-IT", CP280,
+        "EBCDIC-CP-ES", CP284,
+        "EBCDIC-CP-GB", CP285,
+        "EBCDIC-CP-FR", CP297,
     
-        "EBCDIC-CP-AR1", "cp420",
-        "EBCDIC-CP-HE", "cp424",
-        "EBCDIC-CP-BE", "cp500",
-        "EBCDIC-CP-CH", "cp500",
+        "EBCDIC-CP-AR1", CP420,
+        "EBCDIC-CP-HE", CP424,
+        "EBCDIC-CP-BE", CP500,
+        "EBCDIC-CP-CH", CP500,
     
-        "EBCDIC-CP-ROECE", "cp870",
-        "EBCDIC-CP-YU", "cp870",
-        "EBCDIC-CP-IS", "cp871",
-        "EBCDIC-CP-AR2", "cp918",
+        "EBCDIC-CP-ROECE", CP870,
+        "EBCDIC-CP-YU", CP870,
+        "EBCDIC-CP-IS", CP871,
+        "EBCDIC-CP-AR2", CP918,
         
         // IANA also defines two that JDK 1.2 doesn't handle:
         //  EBCDIC-CP-GR        --> CP423

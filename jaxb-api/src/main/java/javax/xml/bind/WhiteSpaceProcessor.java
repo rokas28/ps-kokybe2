@@ -120,6 +120,16 @@ abstract class WhiteSpaceProcessor {
     public static String collapse(String text) {
         return collapse( (CharSequence)text ).toString();
     }
+    
+    public static int count(int len, CharSequence text) {
+        int s=0;
+        while(s<len) {
+            if(isWhiteSpace(text.charAt(s)))
+                break;
+            s++;
+        }
+        return s;
+    }
 
     /**
      * This is usually the biggest processing bottleneck.
@@ -132,12 +142,7 @@ abstract class WhiteSpaceProcessor {
         // most of the texts are already in the collapsed form.
         // so look for the first whitespace in the hope that we will
         // never see it.
-        int s=0;
-        while(s<len) {
-            if(isWhiteSpace(text.charAt(s)))
-                break;
-            s++;
-        }
+        int s = count(len, text);
         if(s==len)
             // the input happens to be already collapsed.
             return text;
