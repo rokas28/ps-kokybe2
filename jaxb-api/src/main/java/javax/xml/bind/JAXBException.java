@@ -57,7 +57,7 @@ public class JAXBException extends Exception {
      * Vendor specific error code
      *
      */
-    private String errorCode;
+    private final String errorCode;
 
     /** 
      * Exception reference
@@ -156,6 +156,7 @@ public class JAXBException extends Exception {
      * Returns a short description of this JAXBException.
      *
      */
+    @Override
     public String toString() {
         return linkedException == null ? 
             super.toString() :
@@ -169,6 +170,7 @@ public class JAXBException extends Exception {
      *
      * @param s PrintStream to use for output
      */
+    @Override
     public void printStackTrace( java.io.PrintStream s ) {
         super.printStackTrace(s);
     }
@@ -178,6 +180,7 @@ public class JAXBException extends Exception {
      * of the linkedException if it is non-null) to {@code System.err}.
      *
      */
+    @Override
     public void printStackTrace() {
         super.printStackTrace();
     }
@@ -188,12 +191,13 @@ public class JAXBException extends Exception {
      *
      * @param s PrintWriter to use for output
      */
+    @Override
     public void printStackTrace(PrintWriter s) {
         super.printStackTrace(s);
     }
 
     @Override
     public Throwable getCause() {
-        return linkedException;
+        return this.getLinkedException();
     }
 }
