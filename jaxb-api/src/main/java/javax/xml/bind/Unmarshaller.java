@@ -45,6 +45,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.attachment.AttachmentUnmarshaller;
 import javax.xml.validation.Schema;
 import java.io.Reader;
+import java.io.Serializable;
 
 /**
  * The {@code Unmarshaller} class governs the process of deserializing XML
@@ -585,7 +586,7 @@ public interface Unmarshaller {
      *      If any parameter is null
      * @since 1.6, JAXB 2.0
      */
-    public <T> JAXBElement<T> unmarshal( org.w3c.dom.Node node, Class<T> declaredType ) throws JAXBException;
+    public <T extends Serializable> JAXBElement<T> unmarshal(org.w3c.dom.Node node, Class<T> declaredType ) throws JAXBException;
     
     /**
      * Unmarshal XML data from the specified XML Source and return the 
@@ -674,7 +675,7 @@ public interface Unmarshaller {
      *      If any parameter is null
      * @since 1.6, JAXB 2.0
      */
-    public <T> JAXBElement<T> unmarshal( javax.xml.transform.Source source, Class<T> declaredType )
+    public <T extends Serializable> JAXBElement<T> unmarshal( javax.xml.transform.Source source, Class<T> declaredType )
         throws JAXBException;
     
     /**
@@ -745,7 +746,7 @@ public interface Unmarshaller {
      *      If any parameter is null
      * @since 1.6, JAXB 2.0
      */
-    public <T> JAXBElement<T> unmarshal( javax.xml.stream.XMLStreamReader reader, Class<T> declaredType ) throws JAXBException;
+    public <T extends Serializable> JAXBElement<T> unmarshal( javax.xml.stream.XMLStreamReader reader, Class<T> declaredType ) throws JAXBException;
 
     /**
      * Unmarshal XML data from the specified pull parser and return the
@@ -816,7 +817,7 @@ public interface Unmarshaller {
      *      If any parameter is null
      * @since 1.6, JAXB 2.0
      */
-    public <T> JAXBElement<T> unmarshal( javax.xml.stream.XMLEventReader reader, Class<T> declaredType ) throws JAXBException;
+    public <T extends Serializable> JAXBElement<T> unmarshal( javax.xml.stream.XMLEventReader reader, Class<T> declaredType ) throws JAXBException;
 
     /**
      * Get an unmarshaller handler object that can be used as a component in
