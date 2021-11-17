@@ -76,7 +76,7 @@ import java.io.Serializable;
  * @since 1.6, JAXB 2.0
  */
 
-public class JAXBElement<T extends Serializable> implements Serializable {
+public class JAXBElement<T> implements Serializable {
 
     /** xml element tag name */
     final protected QName name;

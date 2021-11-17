@@ -384,19 +384,19 @@ public abstract class AbstractUnmarshallerImpl implements Unmarshaller
         throw new UnsupportedOperationException();
     }
 
-    public <T extends Serializable> JAXBElement<T> unmarshal(Node node, Class<T> expectedType) throws JAXBException {
+    public <T> JAXBElement<T> unmarshal(Node node, Class<T> expectedType) throws JAXBException {
         throw new UnsupportedOperationException();
     }
 
-    public <T extends Serializable> JAXBElement<T> unmarshal(Source source, Class<T> expectedType) throws JAXBException {
+    public <T> JAXBElement<T> unmarshal(Source source, Class<T> expectedType) throws JAXBException {
         throw new UnsupportedOperationException();
     }
 
-    public <T extends Serializable> JAXBElement<T> unmarshal(XMLStreamReader reader, Class<T> expectedType) throws JAXBException {
+    public <T> JAXBElement<T> unmarshal(XMLStreamReader reader, Class<T> expectedType) throws JAXBException {
         throw new UnsupportedOperationException();
     }
 
-    public <T extends Serializable> JAXBElement<T> unmarshal(XMLEventReader reader, Class<T> expectedType) throws JAXBException {
+    public <T> JAXBElement<T> unmarshal(XMLEventReader reader, Class<T> expectedType) throws JAXBException {
         throw new UnsupportedOperationException();
     }
 
