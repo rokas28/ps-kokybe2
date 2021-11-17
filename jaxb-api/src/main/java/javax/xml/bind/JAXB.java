@@ -46,11 +46,7 @@ import javax.xml.transform.Result;
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 import java.beans.Introspector;
-import java.io.File;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.Reader;
-import java.io.Writer;
+import java.io.*;
 import java.lang.ref.WeakReference;
 import java.net.HttpURLConnection;
 import java.net.URI;
@@ -550,7 +546,7 @@ public final class JAXB {
             context = getContext(clazz);
             if(r==null) {
                 // we need to infer the name
-                jaxbObject = new JAXBElement(new QName(inferName(clazz)),clazz, jaxbObject);
+                jaxbObject = new JAXBElement(new QName(inferName(clazz)),clazz, (Serializable) jaxbObject);
             }
         }
 
