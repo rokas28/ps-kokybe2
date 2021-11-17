@@ -317,13 +317,13 @@ public abstract class AbstractMarshallerImpl implements Marshaller
      */
     protected String getJavaEncoding( String encoding ) throws UnsupportedEncodingException {
         try {
-            "1".getBytes(encoding);
+            byte[] bytes = "1".getBytes(encoding);
             return encoding;
         } catch( UnsupportedEncodingException e ) {
             // try known alias
             for( int i=0; i<aliases.length; i+=2 ) {
                 if(encoding.equals(aliases[i])) {
-                    "1".getBytes(aliases[i+1]);
+                    byte[] bytes = "1".getBytes(aliases[i+1]);
                     return aliases[i+1];
                 }
             }

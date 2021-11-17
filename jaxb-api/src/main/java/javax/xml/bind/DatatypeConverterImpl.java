@@ -275,9 +275,10 @@ final class DatatypeConverterImpl implements DatatypeConverterInterface {
         return b.booleanValue();
     }
 
-    public static Boolean checkStrBooleanTrue(char ch, CharSequence literal, int strIndex, int len ) {
+    public static Boolean checkStrBooleanTrue(char character, CharSequence literal, int strIndex, int len ) {
         String strTrue = "rue";
         int i = 0;
+        char ch = character;
         do {
             ch = literal.charAt(i++);
         } while ((strTrue.charAt(strIndex++) == ch) && i < len && strIndex < 3);
@@ -289,9 +290,10 @@ final class DatatypeConverterImpl implements DatatypeConverterInterface {
         }
     }
 
-    public static Boolean checkStrBooleanFalse(char ch, CharSequence literal, int strIndex, int len ) {
+    public static Boolean checkStrBooleanFalse(char character, CharSequence literal, int strIndex, int len ) {
         String strFalse = "alse";
         int i = 0;
+        char ch = character;
         do {
             ch = literal.charAt(i++);
         } while ((strFalse.charAt(strIndex++) == ch) && i < len && strIndex < 4);
@@ -742,7 +744,7 @@ final class DatatypeConverterImpl implements DatatypeConverterInterface {
                     out[o++] = (byte) ((quadruplet[1] << 4) | (quadruplet[2] >> 2));
                 }
                 if (quadruplet[3] != PADDING) {
-                    out[o++] = (byte) ((quadruplet[2] << 6) | (quadruplet[3]));
+                    out[o++] = (byte) ((quadruplet[2] << 6) | (quadruplet[3] & 0xff));
                 }
                 q = 0;
             }
