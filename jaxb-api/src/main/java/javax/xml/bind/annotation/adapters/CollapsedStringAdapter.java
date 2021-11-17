@@ -41,7 +41,6 @@
 package javax.xml.bind.annotation.adapters;
 
 
-
 /**
  * Built-in {@link XmlAdapter} to handle {@code xs:token} and its derived types.
  *
@@ -53,6 +52,16 @@ package javax.xml.bind.annotation.adapters;
  * @since 1.6, JAXB 2.0
  */
 public class CollapsedStringAdapter extends XmlAdapter<String,String> {
+
+    public static int count(int len, CharSequence text) {
+        int s=0;
+        while(s<len) {
+            if(isWhiteSpace(text.charAt(s)))
+                break;
+            s++;
+        }
+        return s;
+    }
     /**
      * Removes leading and trailing whitespaces of the string
      * given as the parameter, then truncate any
@@ -66,12 +75,7 @@ public class CollapsedStringAdapter extends XmlAdapter<String,String> {
         // most of the texts are already in the collapsed form.
         // so look for the first whitespace in the hope that we will
         // never see it.
-        int s=0;
-        while(s<len) {
-            if(isWhiteSpace(text.charAt(s)))
-                break;
-            s++;
-        }
+        int s = count(len, text);
         if(s==len)
             // the input happens to be already collapsed.
             return text;

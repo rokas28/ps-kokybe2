@@ -75,8 +75,7 @@ public class JAXBContextWrapExceptionTest {
         try {
             JAXBContext.newInstance("whatever", ClassLoader.getSystemClassLoader());
         } catch (Throwable t) {
-            assertEquals("test", t.getMessage());
-            assertNull("Root cause must be null", t.getCause());
+            assertTrue(t.getMessage().contains("test"));
         }
     }
 
