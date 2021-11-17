@@ -43,6 +43,7 @@ package javax.xml.bind;
 import org.w3c.dom.Node;
 
 import javax.xml.validation.Schema;
+import java.io.Serializable;
 
 /**
  * Enable synchronization between XML infoset nodes and JAXB objects 
@@ -170,7 +171,7 @@ public abstract class Binder<XmlNode> {
      *      If any of the input parameters are null
      * @since 1.6, JAXB 2.0
      */
-    public abstract <T> JAXBElement<T> 
+    public abstract <T extends Serializable> JAXBElement<T>
 	unmarshal( XmlNode xmlNode, Class<T> declaredType ) 
 	throws JAXBException;
 

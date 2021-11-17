@@ -47,12 +47,7 @@ import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 import java.beans.Introspector;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.Reader;
-import java.io.Writer;
+import java.io.*;
 import java.lang.ref.WeakReference;
 import java.net.HttpURLConnection;
 import java.net.URI;
@@ -163,7 +158,7 @@ public final class JAXB {
      * @param xml
      *      Reads the entire file as XML.
      */
-    public static <T> T unmarshal( File xml, Class<T> type ) {
+    public static <T extends Serializable> T unmarshal(File xml, Class<T> type ) {
         try {
             JAXBElement<T> item = getContext(type).createUnmarshaller().unmarshal(new StreamSource(xml), type);
             return item.getValue();
@@ -178,7 +173,7 @@ public final class JAXB {
      * @param xml
      *      The resource pointed by the URL is read in its entirety.
      */
-    public static <T> T unmarshal( URL xml, Class<T> type ) {
+    public static <T extends Serializable> T unmarshal( URL xml, Class<T> type ) {
         try {
             JAXBElement<T> item = getContext(type).createUnmarshaller().unmarshal(toSource(xml), type);
             return item.getValue();
@@ -196,7 +191,7 @@ public final class JAXB {
      *      The URI is {@link URI#toURL() turned into URL} and then
      *      follows the handling of {@code URL}.
      */
-    public static <T> T unmarshal( URI xml, Class<T> type ) {
+    public static <T extends Serializable> T unmarshal( URI xml, Class<T> type ) {
         try {
             JAXBElement<T> item = getContext(type).createUnmarshaller().unmarshal(toSource(xml), type);
             return item.getValue();
@@ -215,7 +210,7 @@ public final class JAXB {
      *      If it's not {@link URI#isAbsolute() a valid absolute URI},
      *      then it's interpreted as a {@code File}
      */
-    public static <T> T unmarshal( String xml, Class<T> type ) {
+    public static <T extends Serializable> T unmarshal( String xml, Class<T> type ) {
         try {
             JAXBElement<T> item = getContext(type).createUnmarshaller().unmarshal(toSource(xml), type);
             return item.getValue();
@@ -233,7 +228,7 @@ public final class JAXB {
      *      The entire stream is read as an XML infoset.
      *      Upon a successful completion, the stream will be closed by this method.
      */
-    public static <T> T unmarshal( InputStream xml, Class<T> type ) {
+    public static <T extends Serializable> T unmarshal( InputStream xml, Class<T> type ) {
         try {
             JAXBElement<T> item = getContext(type).createUnmarshaller().unmarshal(toSource(xml), type);
             return item.getValue();
@@ -252,7 +247,7 @@ public final class JAXB {
      *      The encoding declaration in the XML will be ignored.
      *      Upon a successful completion, the stream will be closed by this method.
      */
-    public static <T> T unmarshal( Reader xml, Class<T> type ) {
+    public static <T extends Serializable> T unmarshal( Reader xml, Class<T> type ) {
         try {
             JAXBElement<T> item = getContext(type).createUnmarshaller().unmarshal(toSource(xml), type);
             return item.getValue();
@@ -269,7 +264,7 @@ public final class JAXB {
      * @param xml
      *      The XML infoset that the {@link Source} represents is read.
      */
-    public static <T> T unmarshal( Source xml, Class<T> type ) {
+    public static <T extends Serializable> T unmarshal( Source xml, Class<T> type ) {
         try {
             JAXBElement<T> item = getContext(type).createUnmarshaller().unmarshal(toSource(xml), type);
             return item.getValue();
@@ -578,7 +573,7 @@ public final class JAXB {
                 context = getContext(clazz);
                 if(r==null) {
                     // we need to infer the name
-                    jaxbObject = new JAXBElement(new QName(inferName(clazz)),clazz,jaxbObject);
+                    jaxbObject = new JAXBElement(new QName(inferName(clazz)),clazz, (Serializable) jaxbObject);
                 }
             }
 
